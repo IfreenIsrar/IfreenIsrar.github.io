@@ -1,5 +1,3 @@
-/* ================= ROOT VARIABLES ================= */
-
 :root {
   --primary: #6c63ff;
 --accent: #cbd5e1;
@@ -21,8 +19,6 @@
 
   --transition: 0.3s ease;
 }
-
-/* ================= GLOBAL ================= */
 
 * {
   margin: 0;
@@ -55,8 +51,6 @@ body {
   font-size: 42px;
   margin-bottom: 60px;
 }
-
-/* ================= NAVBAR ================= */
 
 .navbar {
   position: fixed;
@@ -102,14 +96,12 @@ body {
 }
 
 .about-text {
-  max-width: 800px;   /* controls readable width */
-  margin: 20px auto;  /* centers block horizontally */
+  max-width: 800px;   
+  margin: 20px auto; 
   line-height: 1.8;
   font-size: 18px;
   color: var(--text-muted);
 }
-
-/* ================= HERO ================= */
 
 #hero {
   height: 100vh;
@@ -138,7 +130,6 @@ body {
 }
 
 .buttons {
-  display: flex;
   justify-content: center;
   gap: 20px;
 }
@@ -171,11 +162,9 @@ body {
   color: var(--dark);
 }
 
-/* ================= CARD GRID ================= */
-
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -224,8 +213,6 @@ body {
   color: var(--accent);
   margin-bottom: 10px;
 }
-/* ================= CONTACT ================= */
-
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -271,8 +258,6 @@ body {
   color: var(--accent);
 }
 
-/* ================= PREMIUM CONTACT FORM ================= */
-
 .contact-form-wrapper {
   max-width: 750px;
   margin: 80px auto 0;
@@ -289,21 +274,18 @@ body {
   transform: translateY(-5px);
 }
 
-/* Title */
 .form-title {
   font-size: 28px;
   margin-bottom: 40px;
   font-weight: 600;
 }
 
-/* Layout */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* Two inputs side by side */
 .form-row {
   display: flex;
   gap: 20px;
@@ -313,7 +295,6 @@ body {
   flex: 1;
 }
 
-/* Inputs & textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -327,7 +308,6 @@ body {
   transition: 0.3s ease;
 }
 
-/* Focus effect */
 .contact-form input:focus,
 .contact-form textarea:focus {
    background: rgba(0, 0, 0, 0.35);
@@ -336,7 +316,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Textarea */
 .contact-form textarea {
   resize: none;
 }
@@ -391,9 +370,6 @@ body {
       0 15px 35px rgba(203, 213, 225, 0.5),
       inset 0 -3px 8px rgba(0,0,0,0.15);
 }
-
-
-/* ================= FOOTER ================= */
 
 .footer {
   background: #0f0f15;
@@ -467,30 +443,71 @@ body {
   font-size: 14px;
   color: #777;
 }
-
-/* ================= RESPONSIVE ================= */
+  /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+
+  .section {
+    padding: 80px 18px;
+  }
+
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* Buttons side-by-side */
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* 2 cards per row */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .form-row {
     flex-direction: column;
   }
 
-  .nav-links {
-    gap: 15px;
+  .info-card {
+    padding: 25px 18px;
   }
-}
-@media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 576px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .contact-card {
+    padding: 35px 18px;
   }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
 }

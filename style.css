@@ -443,67 +443,77 @@ body {
   font-size: 14px;
   color: #777;
 }
-  /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
 
+  /* Better section spacing */
   .section {
-    padding: 80px 18px;
+    padding: 70px 20px;
+  }
+
+  /* HERO */
+  #hero {
+    height: auto;
+    padding: 140px 20px 80px;
   }
 
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .hero-content h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .hero-content p {
     font-size: 15px;
+    line-height: 1.7;
   }
 
-  /* Buttons side-by-side */
+  /* Buttons stacked for better tap UX */
   .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .buttons a {
-    flex: 1;
+    width: 100%;
     text-align: center;
-    padding: 10px 12px;
+    padding: 12px;
     font-size: 14px;
   }
 
-  /* 2 cards per row */
+  /* Cards 1 per row (clean & premium) */
   .card-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .info-card {
+    padding: 28px 20px;
+    min-height: auto;
+  }
+
+  /* Contact stacked */
+  .contact-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-card {
+    padding: 30px 20px;
   }
 
+  /* Form spacing */
   .form-row {
     flex-direction: column;
   }
 
-  .info-card {
-    padding: 25px 18px;
-  }
-
-  .contact-card {
-    padding: 35px 18px;
-  }
-
-  /* Footer */
+  /* Footer stacked */
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
   }
 
   .social-icons {
